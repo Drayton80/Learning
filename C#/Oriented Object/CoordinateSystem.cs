@@ -1,10 +1,10 @@
 using System;
 
 public class CoordinateSystem{
-	private float _x;
-	private float _y;
+	private double _x;
+	private double _y;
 	
-	public float x{
+	public double x{
 		get{
 			return this._x;
 		}
@@ -14,7 +14,7 @@ public class CoordinateSystem{
 		}
 	}
 	
-	public float y{
+	public double y{
 		get{
 			return this._y;
 		}
@@ -24,37 +24,37 @@ public class CoordinateSystem{
 		}
 	}
 	
-	public float r{
+	public double r{
 		get{
-			float x = this._x;
-			float y = this._y;
+			double x = this._x;
+			double y = this._y;
 			
-			return (float) Math.Sqrt(x*x + y*y);
+			return Math.Sqrt(x*x + y*y);
 		}
 		
 		set{
-			float o = this.o;
-			float r = value;
+			double o = this.o;
+			double r = value;
 			
-			this._x = r * (float) Math.Cos(o);
-			this._y = r * (float) Math.Sin(o);
+			this._x = r * Math.Cos(o);
+			this._y = r * Math.Sin(o);
 		}
 	}
 	
-	public float o{
+	public double o{
 		get{
-			float x = this._x;
-			float y = this._y;
+			double x = this._x;
+			double y = this._y;
 			
-			return (float) Math.Atan2(y,x);
+			return Math.Atan2(y,x);
 		}
 		
 		set{
-			float o = value;
-			float r = this.r;
+			double o = value;
+			double r = this.r;
 			
-			this._x = r * (float) Math.Cos(o);
-			this._y = r * (float) Math.Sin(o);
+			this._x = r * Math.Cos(o);
+			this._y = r * Math.Sin(o);
 		}
 	}	
 }
@@ -66,7 +66,7 @@ public class Program
 		// Teste:
 		CoordinateSystem coordinates = new CoordinateSystem();
 		coordinates.x = 1;
-		coordinates.y = (float) Math.Sqrt(3);
+		coordinates.y = Math.Sqrt(3);
 		Console.WriteLine(coordinates.r);
 		Console.WriteLine(coordinates.o);
 	}
