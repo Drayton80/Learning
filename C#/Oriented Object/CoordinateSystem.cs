@@ -63,10 +63,15 @@ public class Program
 {
 	public static void Main()
 	{
-		// Teste:
+		// Teste de X e Y:
 		CoordinateSystem coordinates = new CoordinateSystem();
 		coordinates.x = 1;
-		coordinates.y = Math.Sqrt(3);
+		coordinates.y = 3;
+		Console.WriteLine(coordinates.x);
+		Console.WriteLine(coordinates.y);
+		// Teste de R e O:
+		coordinates.r = 2;
+		coordinates.o = 0;
 		Console.WriteLine(coordinates.r);
 		Console.WriteLine(coordinates.o);
 	}
