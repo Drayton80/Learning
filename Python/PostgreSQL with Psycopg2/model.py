@@ -15,6 +15,12 @@ cursor = connection.cursor()
 #  - Server-side cursors: control the flow of data when the client is handling
 #    with a huge amount that is not possible to keeping entire in memory
 
+# Making a insertion:
+cursor.execute(
+    "insert into perfil(nome_usuario, nome_real, senha, biografia, privacidade) values (%s, %s, %s, %s, %s)", 
+    ("User 4", "Name 4", "1234", "", False)
+)
+
 # Executing a query
 cursor.execute("select * from perfil")
 # Get the rows obtained in the query:
