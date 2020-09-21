@@ -22,7 +22,7 @@ public class PersonService {
     // Autowired define que será feita uma dependancy injection aqui baseado no que foi
     // definido através das annotations em outras classes
     @Autowired
-    public PersonService(@Qualifier("fakeDao") PersonDao personDao) { // Nesse caso PersonDao não teve definição pois ele é apenas uma interface, então usa-se
+    public PersonService(@Qualifier("postgres") PersonDao personDao) { // Nesse caso PersonDao não teve definição pois ele é apenas uma interface, então usa-se
                                                                       // o @Qualifier para delimitar que o que será utilizado é a classe que implementa o
                                                                       // personDao e possui a tag fakeDao a ela atrelada
         this.personDao = personDao;
