@@ -1,0 +1,10 @@
+org/example/cachingdata/model/Book.java
+ org.example.cachingdata.model.Book
+org/example/cachingdata/repository/BookRepository.java
+ org.example.cachingdata.repository.BookRepository
+org/example/cachingdata/AppRunner.java
+ org.example.cachingdata.AppRunner
+org/example/cachingdata/repository/SimpleBookRepository.java
+ org.example.cachingdata.repository.SimpleBookRepository
+org/example/cachingdata/CachingDataApplication.java
+ org.example.cachingdata.CachingDataApplication
